@@ -5,8 +5,345 @@
 
 /* Profile Section */
 .profileSection {
-  padding: 4rem 0 3rem;
-  background: linear-gradient(180deg, var(--ifm-color-primary-lightest) 0%, transparent 100%);
+  padding: 5rem 0 4rem;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1419 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.profileSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.profileCard {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.profileHeader h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.profileTitle {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.profileDescription {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.socialLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.socialLink:hover::before {
+  left: 100%;
+}
+
+.socialLink:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 10px 30px rgba(59, 130, 246, 0.2),
+    0 0 20px rgba(96, 165, 250, 0.1);
+}
+
+.socialIcon {
+  font-size: 1.2rem;
+  filter: grayscale(30%);
+}
+
+/* Tools Section */
+.toolsSection {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #0f1419 0%, #1a1f3a 100%);
+  position: relative;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toolCard {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.toolCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toolCard:hover::before {
+  transform: scaleX(1);
+}
+
+.toolCard:hover {
+  border-color: rgba(96, 165, 250, 0.4);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(59, 130, 246, 0.2),
+    inset 0 1px 0 rgba(148, 163, 184, 0.1);
+}
+
+.toolCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #f1f5f9;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.toolCard p {
+  margin-bottom: 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Docs Section */
+.docsSection {
+  padding: 4rem 0 5rem;
+  background: linear-gradient(180deg, #1a1f3a 0%, #0a0e27 100%);
+  position: relative;
+}
+
+.docsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.docCard {
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
+  border: 2px solid rgba(148, 163, 184, 0.1);
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.docCard::after {
+  content: '→';
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  font-size: 1.5rem;
+  color: #60a5fa;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.docCard:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.docCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.docCard:hover::before {
+  opacity: 1;
+}
+
+.docCard:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(148, 163, 184, 0.2);
+}
+
+.docCard h3 {
+  margin-top: 0;
+  /* margin-bottom: 1rem; */
+  color: #f8fafc;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.docCard p {
+  margin-bottom: 0;
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media screen and (max-width: 996px) {
+  .profileSection {
+    padding: 3rem 0 2rem;
+  }
+  
+  .profileHeader h1 {
+    font-size: 2.2rem;
+  }
+
+  .profileTitle {
+    font-size: 1.3rem;
+  }
+
+  .profileDescription {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .toolsGrid,
+  .docsGrid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .socialLinks {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 1rem;
+  }
+  
+  .socialLink {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .profileHeader h1 {
+    font-size: 1.8rem;
+  }
+
+  .socialLink {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .toolCard,
+  .docCard {
+    padding: 1.5rem;
+  }
 }
 
 .profileCard {
@@ -148,7 +485,7 @@
 
 .docCard h3 {
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
   color: var(--ifm-color-primary-darker);
   font-size: 1.3rem;
 }

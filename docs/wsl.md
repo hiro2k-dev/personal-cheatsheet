@@ -1,4 +1,4 @@
-# 🐧 WSL 2 Installation Guide (Windows 10/11)
+# WSL 2(Window)
 
 This guide explains how to install and configure **WSL 2 (Windows Subsystem for Linux)** on Windows 10 or Windows 11.
 

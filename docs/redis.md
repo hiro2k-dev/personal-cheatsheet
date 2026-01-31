@@ -1,4 +1,4 @@
-# 🔴 Redis Installation & Configuration Guide (VPS and Local Laptop)
+# Redis
 
 This guide explains how to install, configure, and run **Redis** both on a **VPS (Linux server)** and on a **local laptop (Windows/macOS/Linux)** for development or production use.
 

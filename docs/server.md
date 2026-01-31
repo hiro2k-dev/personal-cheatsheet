@@ -1,4 +1,4 @@
-# 🛡️ Secure Deployment Guide (Ubuntu VPS)
+# Secure Deployment Guide (Ubuntu VPS)
 
 This guide shows the **complete, safe process** to create a non-root deployment user, set up SSH access, deploy applications, and manage privileges cleanly.
 

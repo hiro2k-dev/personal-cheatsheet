@@ -1,4 +1,5 @@
-# 🐳 Docker Installation Guide (Windows with WSL2)
+
+# Docker
 
 This guide explains how to properly install Docker Desktop on Windows using **WSL 2**, ensuring full compatibility with Ubuntu or other Linux distributions.
 

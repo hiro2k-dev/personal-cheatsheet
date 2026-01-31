@@ -38,7 +38,6 @@ const socialLinks = [
   },
 ];
 
-// Danh sách Tools - TỰ ĐIỀN
 const tools = [
   {
     name: 'Docker',
@@ -46,26 +45,73 @@ const tools = [
     description: 'Containerization platform',
   },
   {
-    name: 'Kubernetes',
-    url: 'https://kubernetes.io/',
-    description: 'Container orchestration',
-  }
+    name: 'Redis',
+    url: 'https://redis.io/',
+    description: 'In-memory data structure store',
+  },
+  {
+    name: 'MongoDB',
+    url: 'https://www.mongodb.com/',
+    description: 'NoSQL database',
+  },
+  {
+    name: 'Node.js',
+    url: 'https://nodejs.org/',
+    description: 'JavaScript runtime',
+  },
+  {
+    name: 'Nginx',
+    url: 'https://nginx.org/',
+    description: 'Web server and reverse proxy',
+  },
+  {
+    name: 'Git',
+    url: 'https://git-scm.com/',
+    description: 'Version control system',
+  },
 ];
 
-// Danh sách DevOps Docs - TỰ ĐIỀN
 const devopsDocs = [
+  {
+    title: 'Docker Guide',
+    url: '/docs/docker',
+    description: 'Installation, Dockerfile, docker-compose basics',
+  },
+  {
+    title: 'Redis',
+    url: '/docs/redis',
+    description: 'In-memory data store setup and configuration',
+  },
+  {
+    title: 'MongoDB',
+    url: '/docs/mongodb',
+    description: 'NoSQL database installation and usage',
+  },
   {
     title: 'Node.js',
     url: '/docs/node',
+    description: 'Node.js setup and configuration',
   },
   {
-    title: 'Docker',
-    url: '/docs/docker',
+    title: 'Server Setup',
+    url: '/docs/server',
+    description: 'VPS and server configuration guide',
   },
   {
-    title: 'mongoDB',
-    url: '/docs/mongodb',
-  }
+    title: 'UFW Firewall',
+    url: '/docs/ufw',
+    description: 'Uncomplicated Firewall setup and rules',
+  },
+  {
+    title: 'WSL2',
+    url: '/docs/wsl',
+    description: 'Windows Subsystem for Linux guide',
+  },
+  {
+    title: 'Telegram Bot',
+    url: '/docs/telegram',
+    description: 'Telegram bot development basics',
+  },
 ];
 
 function ProfileSection() {
@@ -76,7 +122,6 @@ function ProfileSection() {
           <div className={styles.profileHeader}>
             <Heading as="h1">{profile.name}</Heading>
             <p className={styles.profileTitle}>{profile.title}</p>
-            <p className={styles.profileDescription}>{profile.description}</p>
           </div>
           
           <div className={styles.socialLinks}>
@@ -87,7 +132,6 @@ function ProfileSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}>
-                {/* <span className={styles.socialIcon}>{link.icon}</span> */}
                 {link.name}
               </a>
             ))}
@@ -114,7 +158,6 @@ function ToolsSection() {
               rel="noopener noreferrer"
               className={styles.toolCard}>
               <h3>{tool.name}</h3>
-              {/* <p>{tool.description}</p> */}
             </a>
           ))}
         </div>
@@ -134,7 +177,6 @@ function DocsSection() {
           {devopsDocs.map((doc, idx) => (
             <Link key={idx} to={doc.url} className={styles.docCard}>
               <h3>{doc.title}</h3>
-              {/* <p>{doc.description}</p> */}
             </Link>
           ))}
         </div>

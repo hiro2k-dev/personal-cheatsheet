@@ -1,4 +1,4 @@
-# 🔒 UFW (Uncomplicated Firewall) Usage Guide
+# UFW
 
 This guide explains how to install, configure, and manage **UFW** — a simple yet powerful firewall tool for Ubuntu and other Linux distributions.
 
