@@ -40,35 +40,21 @@ const socialLinks = [
 
 const tools = [
   {
-    name: 'Docker',
-    url: 'https://www.docker.com/',
-    description: 'Containerization platform',
+    name: 'Easy copy/paste online',
+    url: 'https://easycopy.hirodev.space'
   },
   {
-    name: 'Redis',
-    url: 'https://redis.io/',
-    description: 'In-memory data structure store',
+    name: "Posture Reminder Chrome Extension",
+    url: 'https://chromewebstore.google.com/detail/posture-reminder/kiimkemiinjofphddpecefjjcjmpnhpf'
   },
   {
-    name: 'MongoDB',
-    url: 'https://www.mongodb.com/',
-    description: 'NoSQL database',
+    name: "TU Dortmund dormitory registration reminder",
+    url: 'http://t.me/tud_dorm_reminder_bot'
   },
   {
-    name: 'Node.js',
-    url: 'https://nodejs.org/',
-    description: 'JavaScript runtime',
-  },
-  {
-    name: 'Nginx',
-    url: 'https://nginx.org/',
-    description: 'Web server and reverse proxy',
-  },
-  {
-    name: 'Git',
-    url: 'https://git-scm.com/',
-    description: 'Version control system',
-  },
+    name: "No Crop Image Bot",
+    url: 'https://t.me/nocropimagebot'
+  }
 ];
 
 const devopsDocs = [
