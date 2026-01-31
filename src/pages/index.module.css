@@ -1,0 +1,192 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* Profile Section */
+.profileSection {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(180deg, var(--ifm-color-primary-lightest) 0%, transparent 100%);
+}
+
+.profileCard {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profileHeader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profileTitle {
+  font-size: 1.5rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.profileDescription {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.socialIcon {
+  font-size: 1.2rem;
+}
+
+/* Tools Section */
+.toolsSection {
+  padding: 3rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.toolCard {
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  background-color: var(--ifm-card-background-color);
+}
+
+.toolCard:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.toolCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.2rem;
+}
+
+.toolCard p {
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+}
+
+/* Docs Section */
+.docsSection {
+  padding: 3rem 0;
+  background: linear-gradient(180deg, transparent 0%, var(--ifm-color-primary-lightest) 100%);
+}
+
+.docsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.docCard {
+  padding: 2rem;
+  border: 2px solid var(--ifm-color-primary-light);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+[data-theme='dark'] .docCard {
+  background-color: var(--ifm-background-surface-color);
+}
+
+.docCard:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.docCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-primary-darker);
+  font-size: 1.3rem;
+}
+
+[data-theme='dark'] .docCard h3 {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.docCard p {
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 996px) {
+  .profileSection {
+    padding: 2rem 0;
+  }
+  
+  .profileHeader h1 {
+    font-size: 2rem;
+  }
+  
+  .toolsGrid,
+  .docsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .socialLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .socialLink {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
