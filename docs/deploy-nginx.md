@@ -187,26 +187,34 @@ sudo systemctl reload nginx
 
 ```bash
 #!/bin/bash
+set -e
 
-# ===== CONFIG =====
-REPO_DIR=/root/easypaster/easypaste-FE
-DEPLOY_DIR=/var/www/easycopy-frontend
+REPO_DIR=""
+DEPLOY_DIR="/var/www/<<NAME>>"
+BRANCH="master"
 
-# Step 1: Pull latest code
-cd $REPO_DIR || exit 1
-git pull origin main || exit 1
+echo "Deploying nocrop frontend..."
 
-# Step 2: Install dependencies and build
-npm install
-npm run build || exit 1
+# 1) Update source
+cd "$REPO_DIR" || { echo "ERROR: Cannot cd to $REPO_DIR"; exit 1; }
+git fetch --all
+git checkout "$BRANCH"
+git pull origin "$BRANCH"
 
-# Step 3: Deploy build output
-sudo mkdir -p $DEPLOY_DIR
-sudo rm -rf $DEPLOY_DIR/*
-sudo cp -r dist/* $DEPLOY_DIR/
+# 2) Install deps + build
+yarn install --frozen-lockfile || yarn install
+yarn build
 
-# Step 4: Reload Nginx
+# 3) Deploy dist -> web root
+sudo mkdir -p "$DEPLOY_DIR"
+sudo rm -rf "$DEPLOY_DIR"/*
+sudo cp -r dist/* "$DEPLOY_DIR/"
+
+# 4) Reload nginx
+sudo nginx -t
 sudo systemctl reload nginx
+
+echo "Done."
 ```
 
 ---
