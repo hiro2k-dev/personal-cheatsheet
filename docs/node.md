@@ -6,3 +6,7 @@ nvm install --lts
 npm install -g yarn
 npm install -g pm2
 ```
+Enable yarn in powershell window
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
