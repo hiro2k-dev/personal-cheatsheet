@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io',
+  url: 'https://hiro2k-dev.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-username', // Usually your GitHub org/user name.
-  projectName: 'hirocheatsheet', // Usually your repo name.
+  organizationName: 'hiro2k-dev', // Usually your GitHub org/user name.
+  projectName: 'personal-cheatsheet', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -81,7 +81,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
@@ -97,9 +97,9 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/your-username/hirocheatsheet',
+            href: 'https://github.com/hiro2k-dev',
             label: 'GitHub',
             position: 'right',
           },
@@ -111,10 +111,10 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {
-                label: 'Getting Started',
-                to: '/docs/intro',
-              },
+              // {
+              //   label: 'Getting Started',
+              //   to: '/docs/intro',
+              // },
             ],
           },
           {
@@ -122,29 +122,29 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/your-username',
+                href: 'https://github.com/hiro2k-dev',
               },
               {
                 label: 'LinkedIn',
-                href: 'https://linkedin.com/in/your-username',
+                href: 'https://linkedin.com/in/pham-huy-328b041b5',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/your-username',
-              },
+              // {
+              //   label: 'Twitter',
+              //   href: 'https://twitter.com/your-username',
+              // },
             ],
           },
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DevOps Cheatsheet. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Hiro. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

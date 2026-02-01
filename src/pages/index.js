@@ -6,35 +6,24 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-// Thông tin cá nhân - TỰ ĐIỀN
 const profile = {
   name: 'Hiro',
   title: 'Full-Stack Product Engineer',
-  // description: 'Passionate about automation, cloud infrastructure, and continuous delivery. Building and maintaining scalable systems.',
-  avatar: '/img/avatar.jpg', // Đặt ảnh của bạn vào static/img/
+  avatar: '/img/avatar.jpg',
 };
 
-// Social Media Links - TỰ ĐIỀN
 const socialLinks = [
   {
     name: 'GitHub',
     url: 'https://github.com/hiro2k-dev',
-    // icon: '💻',
   },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/pham-huy-328b041b5',
-    // icon: '💼',
   },
-  // {
-  //   name: 'Twitter',
-  //   url: 'https://twitter.com/yourusername',
-  //   icon: '🐦',
-  // },
   {
     name: 'Email',
     url: 'mailto:huyp26102000@gmail.com',
-    // icon: '📧',
   },
 ];
 
@@ -62,6 +51,11 @@ const devopsDocs = [
     title: 'Docker Guide',
     url: '/docs/docker',
     description: 'Installation, Dockerfile, docker-compose basics',
+  },
+  {
+    title: 'Deploy',
+    url: '/docs/deploy-nginx',
+    description: 'deploying applications with Nginx and PM2',
   },
   {
     title: 'Redis',
